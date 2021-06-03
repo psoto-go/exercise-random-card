@@ -25,12 +25,16 @@ function Randomnum(simbolos) {
 
 window.onload = function refresh() {
   document.querySelector(".numero").innerHTML = Randomnum();
-  let array1 = document.querySelectorAll(".simbolo");
-  array1.forEach(element => (element.innerHTML = Randomcard(simbolos)));
+  document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
+  var aux = document.querySelector(".simbolo").textContent;
+  document.querySelector(".simbolo1").innerHTML = aux;
+  //let array1 = document.querySelectorAll(".simbolo");
+  //array1.forEach(element => (element.innerHTML = Randomcard(simbolos)));
 };
 
 document.getElementById("button").addEventListener("click", function() {
   document.querySelector(".numero").innerHTML = Randomnum();
-  let array1 = document.querySelectorAll(".simbolo");
-  array1.forEach(element => (element.innerHTML = Randomcard(simbolos)));
+  document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
+  var aux = document.querySelector(".simbolo").textContent;
+  document.querySelector(".simbolo1").innerHTML = aux;
 });
