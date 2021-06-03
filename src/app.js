@@ -50,9 +50,6 @@ document.getElementById("button").addEventListener("click", function() {
 });
 var time = 10000;
 setInterval(function() {
-  for (let i = 0; i < 11; i++) {
-    console.log(i);
-  }
   var color = (document.querySelector(".simbolo").style.color = RandomColor());
   document.querySelector(".simbolo1").style.color = color;
   document.querySelector(".numero").innerHTML = Randomnum();
