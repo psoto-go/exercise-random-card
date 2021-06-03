@@ -7,6 +7,14 @@ import "./assets/img/4geeks.ico";
 
 const simbolos = ["♦", "♥", "♠", "♣"];
 
+function RandomColor() {
+  var aux = Math.floor(Math.random() * 2) + 1;
+  if (aux == 1) {
+    aux = "red";
+  } else aux = "black";
+  return aux;
+}
+
 function Randomcard(simbolos) {
   return simbolos[Math.floor(Math.random() * simbolos.length)];
 }
@@ -24,15 +32,17 @@ function Randomnum(simbolos) {
 }
 
 window.onload = function refresh() {
+  var color = (document.querySelector(".simbolo").style.color = RandomColor());
+  document.querySelector(".simbolo1").style.color = color;
   document.querySelector(".numero").innerHTML = Randomnum();
   document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
   var aux = document.querySelector(".simbolo").textContent;
   document.querySelector(".simbolo1").innerHTML = aux;
-  //let array1 = document.querySelectorAll(".simbolo");
-  //array1.forEach(element => (element.innerHTML = Randomcard(simbolos)));
 };
 
 document.getElementById("button").addEventListener("click", function() {
+  var color = (document.querySelector(".simbolo").style.color = RandomColor());
+  document.querySelector(".simbolo1").style.color = color;
   document.querySelector(".numero").innerHTML = Randomnum();
   document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
   var aux = document.querySelector(".simbolo").textContent;
