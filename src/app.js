@@ -48,3 +48,15 @@ document.getElementById("button").addEventListener("click", function() {
   var aux = document.querySelector(".simbolo").textContent;
   document.querySelector(".simbolo1").innerHTML = aux;
 });
+var time = 10000;
+setInterval(function() {
+  for (let i = 0; i < 11; i++) {
+    console.log(i);
+  }
+  var color = (document.querySelector(".simbolo").style.color = RandomColor());
+  document.querySelector(".simbolo1").style.color = color;
+  document.querySelector(".numero").innerHTML = Randomnum();
+  document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
+  var aux = document.querySelector(".simbolo").textContent;
+  document.querySelector(".simbolo1").innerHTML = aux;
+}, time);
