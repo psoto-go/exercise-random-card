@@ -44,7 +44,7 @@ window.onload = function refresh() {
   document.querySelector(".simbolo1").style.color = color;
 };
 
-document.getElementById("button").addEventListener("click", function() {
+document.querySelector("#button").addEventListener("click", function() {
   document.querySelector(".numero").innerHTML = Randomnum();
   var num = (document.querySelector(".simbolo").innerHTML = Randomcard(
     simbolos
