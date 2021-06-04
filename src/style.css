@@ -5,8 +5,8 @@ body {
 }
 
 .card {
-  width: 350px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
   border-radius: 2%;
   margin: 50px;
 }
@@ -16,5 +16,5 @@ body {
 }
 
 .numero {
-  font-size: 90px;
+  font-size: 80px;
 }

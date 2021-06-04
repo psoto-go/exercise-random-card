@@ -7,9 +7,9 @@ import "./assets/img/4geeks.ico";
 
 const simbolos = ["♦", "♥", "♠", "♣"];
 
-function RandomColor() {
-  var aux = Math.floor(Math.random() * 2) + 1;
-  if (aux == 1) {
+function RandomColor(sim) {
+  var aux = "";
+  if (sim == "♦" || sim == "♥") {
     aux = "red";
   } else aux = "black";
   return aux;
@@ -32,28 +32,40 @@ function Randomnum(simbolos) {
 }
 
 window.onload = function refresh() {
-  var color = (document.querySelector(".simbolo").style.color = RandomColor());
-  document.querySelector(".simbolo1").style.color = color;
   document.querySelector(".numero").innerHTML = Randomnum();
-  document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
+  var num = (document.querySelector(".simbolo").innerHTML = Randomcard(
+    simbolos
+  ));
   var aux = document.querySelector(".simbolo").textContent;
   document.querySelector(".simbolo1").innerHTML = aux;
+  var color = (document.querySelector(".simbolo").style.color = RandomColor(
+    num
+  ));
+  document.querySelector(".simbolo1").style.color = color;
 };
 
 document.getElementById("button").addEventListener("click", function() {
-  var color = (document.querySelector(".simbolo").style.color = RandomColor());
-  document.querySelector(".simbolo1").style.color = color;
   document.querySelector(".numero").innerHTML = Randomnum();
-  document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
+  var num = (document.querySelector(".simbolo").innerHTML = Randomcard(
+    simbolos
+  ));
   var aux = document.querySelector(".simbolo").textContent;
   document.querySelector(".simbolo1").innerHTML = aux;
+  var color = (document.querySelector(".simbolo").style.color = RandomColor(
+    num
+  ));
+  document.querySelector(".simbolo1").style.color = color;
 });
 var time = 10000;
 setInterval(function() {
-  var color = (document.querySelector(".simbolo").style.color = RandomColor());
-  document.querySelector(".simbolo1").style.color = color;
   document.querySelector(".numero").innerHTML = Randomnum();
-  document.querySelector(".simbolo").innerHTML = Randomcard(simbolos);
+  var num = (document.querySelector(".simbolo").innerHTML = Randomcard(
+    simbolos
+  ));
   var aux = document.querySelector(".simbolo").textContent;
   document.querySelector(".simbolo1").innerHTML = aux;
+  var color = (document.querySelector(".simbolo").style.color = RandomColor(
+    num
+  ));
+  document.querySelector(".simbolo1").style.color = color;
 }, time);
