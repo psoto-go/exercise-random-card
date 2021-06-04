@@ -1,18 +1,20 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 body {
-  padding: 100px;
   background-color: green;
   font-size: 100px;
-}
-
-div {
-  margin: auto;
 }
 
 .card {
   width: 350px;
   height: 500px;
   border-radius: 2%;
-
   margin: 20px;
+}
+
+#left {
+  transform: rotate(180deg);
+}
+
+.numero {
+  font-size: 90px;
 }
