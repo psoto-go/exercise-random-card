@@ -69,3 +69,13 @@ setInterval(function() {
   ));
   document.querySelector(".simbolo1").style.color = color;
 }, time);
+
+document.querySelector("#width").addEventListener("click", function() {
+  var h = document.querySelector("#inputw").value;
+  document.querySelector(".card").style.width = h + "px";
+});
+
+document.querySelector("#heigth").addEventListener("click", function() {
+  var w = document.querySelector("#inputh").value;
+  document.querySelector(".card").style.height = w + "px";
+});
